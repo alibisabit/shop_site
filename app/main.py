@@ -2,6 +2,7 @@ import time
 
 import streamlit as st
 
+from core.ftypes import safe_product, validate_order
 from core.memo import top_products
 from core.recursion import collect_products_recursive
 from core.transforms import (
@@ -25,6 +26,7 @@ menu = st.sidebar.selectbox(
         "Overview",
         "Data",
         "Functional Core",
+        "Maybe / Either",
         "Reports",
     ],
 )
@@ -186,6 +188,63 @@ elif menu == "Functional Core":
         ],
         use_container_width=True,
     )
+
+elif menu == "Maybe / Either":
+    st.header("Maybe / Either")
+
+    st.write(
+        "Проверка товара и заказа с использованием "
+        "функциональных контейнеров Maybe и Either."
+    )
+
+    st.subheader("1. Поиск товара через Maybe")
+
+    product_ids = [product.id for product in products]
+
+    selected_product = st.selectbox(
+        "Выберите товар",
+        product_ids,
+    )
+
+    product_result = safe_product(
+        products,
+        selected_product,
+    )
+
+    product = product_result.get_or_else(None)
+
+    if product is not None:
+        st.success(f"Товар найден: {product.title} " f"({product.price / 100:.2f} ₽)")
+    else:
+        st.error("Товар не найден.")
+
+    st.subheader("2. Проверка заказа через Either")
+
+    order_options = {
+        f"{order.id} — {order.user_id} — {order.total / 100:.2f} ₽": order
+        for order in orders
+    }
+
+    selected_order_name = st.selectbox(
+        "Выберите заказ",
+        list(order_options.keys()),
+    )
+
+    selected_order = order_options[selected_order_name]
+
+    stock = {product.id: 10 for product in products}
+
+    validation_result = validate_order(
+        selected_order,
+        stock,
+        discounts,
+    )
+
+    if validation_result.error is None:
+        st.success("Заказ прошёл проверку.")
+        st.write(f"Заказ {selected_order.id} " f"можно обработать.")
+    else:
+        st.error(f"Ошибка проверки: {validation_result.error}")
 
 elif menu == "Reports":
     st.header("Reports")
