@@ -1,0 +1,26 @@
+{
+  "categories": [
+    {
+      "id": "cat1",
+      "name": "Electronics",
+      "parent_id": null
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "title": "Laptop",
+      "price": 500000,
+      "category_id": "cat1",
+      "tags": ["computer", "laptop"]
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Ali",
+      "tier": "VIP"
+    }
+  ],
+  "orders": []
+}
