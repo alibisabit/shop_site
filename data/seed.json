@@ -2,25 +2,3607 @@
   "categories": [
     {
       "id": "cat1",
-      "name": "Electronics",
+      "name": "Электроника",
+      "parent_id": null
+    },
+    {
+      "id": "cat2",
+      "name": "Ноутбуки",
+      "parent_id": "cat1"
+    },
+    {
+      "id": "cat3",
+      "name": "Телефоны",
+      "parent_id": "cat1"
+    },
+    {
+      "id": "cat4",
+      "name": "Наушники",
+      "parent_id": "cat1"
+    },
+    {
+      "id": "cat5",
+      "name": "Одежда",
+      "parent_id": null
+    },
+    {
+      "id": "cat6",
+      "name": "Обувь",
+      "parent_id": "cat5"
+    },
+    {
+      "id": "cat7",
+      "name": "Спорт",
+      "parent_id": null
+    },
+    {
+      "id": "cat8",
+      "name": "Книги",
+      "parent_id": null
+    },
+    {
+      "id": "cat9",
+      "name": "Дом",
+      "parent_id": null
+    },
+    {
+      "id": "cat10",
+      "name": "Красота",
+      "parent_id": null
+    },
+    {
+      "id": "cat11",
+      "name": "Аксессуары",
+      "parent_id": "cat1"
+    },
+    {
+      "id": "cat12",
+      "name": "Игрушки",
       "parent_id": null
     }
   ],
   "products": [
     {
       "id": "p1",
-      "title": "Laptop",
-      "price": 500000,
-      "category_id": "cat1",
-      "tags": ["computer", "laptop"]
+      "title": "Ноутбук 1",
+      "price": 30250000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Смартфон 2",
+      "price": 15500000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Наушники 3",
+      "price": 5750000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Футболка 4",
+      "price": 4000000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Кроссовки 5",
+      "price": 9250000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Товар для спорта 6",
+      "price": 5500000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p7",
+      "title": "Книга 7",
+      "price": 3750000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p8",
+      "title": "Товар для дома 8",
+      "price": 5500000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p9",
+      "title": "Товар для красоты 9",
+      "price": 4750000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p10",
+      "title": "Аксессуар 10",
+      "price": 1500000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p11",
+      "title": "Игрушка 11",
+      "price": 2250000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p12",
+      "title": "Ноутбук 12",
+      "price": 30500000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p13",
+      "title": "Смартфон 13",
+      "price": 15750000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p14",
+      "title": "Наушники 14",
+      "price": 6000000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p15",
+      "title": "Футболка 15",
+      "price": 4250000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p16",
+      "title": "Кроссовки 16",
+      "price": 9500000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p17",
+      "title": "Товар для спорта 17",
+      "price": 5750000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p18",
+      "title": "Книга 18",
+      "price": 4000000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p19",
+      "title": "Товар для дома 19",
+      "price": 5750000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p20",
+      "title": "Товар для красоты 20",
+      "price": 2500000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p21",
+      "title": "Аксессуар 21",
+      "price": 1750000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p22",
+      "title": "Игрушка 22",
+      "price": 2500000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p23",
+      "title": "Ноутбук 23",
+      "price": 30750000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p24",
+      "title": "Смартфон 24",
+      "price": 16000000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p25",
+      "title": "Наушники 25",
+      "price": 6250000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p26",
+      "title": "Футболка 26",
+      "price": 4500000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p27",
+      "title": "Кроссовки 27",
+      "price": 9750000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p28",
+      "title": "Товар для спорта 28",
+      "price": 6000000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p29",
+      "title": "Книга 29",
+      "price": 4250000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p30",
+      "title": "Товар для дома 30",
+      "price": 3500000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p31",
+      "title": "Товар для красоты 31",
+      "price": 2750000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p32",
+      "title": "Аксессуар 32",
+      "price": 2000000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p33",
+      "title": "Игрушка 33",
+      "price": 2750000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p34",
+      "title": "Ноутбук 34",
+      "price": 31000000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p35",
+      "title": "Смартфон 35",
+      "price": 16250000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p36",
+      "title": "Наушники 36",
+      "price": 6500000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p37",
+      "title": "Футболка 37",
+      "price": 4750000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p38",
+      "title": "Кроссовки 38",
+      "price": 10000000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p39",
+      "title": "Товар для спорта 39",
+      "price": 6250000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p40",
+      "title": "Книга 40",
+      "price": 2000000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p41",
+      "title": "Товар для дома 41",
+      "price": 3750000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p42",
+      "title": "Товар для красоты 42",
+      "price": 3000000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p43",
+      "title": "Аксессуар 43",
+      "price": 2250000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p44",
+      "title": "Игрушка 44",
+      "price": 3000000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p45",
+      "title": "Ноутбук 45",
+      "price": 31250000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p46",
+      "title": "Смартфон 46",
+      "price": 16500000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p47",
+      "title": "Наушники 47",
+      "price": 6750000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p48",
+      "title": "Футболка 48",
+      "price": 5000000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p49",
+      "title": "Кроссовки 49",
+      "price": 10250000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p50",
+      "title": "Товар для спорта 50",
+      "price": 4000000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p51",
+      "title": "Книга 51",
+      "price": 2250000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p52",
+      "title": "Товар для дома 52",
+      "price": 4000000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p53",
+      "title": "Товар для красоты 53",
+      "price": 3250000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p54",
+      "title": "Аксессуар 54",
+      "price": 2500000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p55",
+      "title": "Игрушка 55",
+      "price": 3250000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p56",
+      "title": "Ноутбук 56",
+      "price": 31500000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p57",
+      "title": "Смартфон 57",
+      "price": 16750000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p58",
+      "title": "Наушники 58",
+      "price": 7000000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p59",
+      "title": "Футболка 59",
+      "price": 5250000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p60",
+      "title": "Кроссовки 60",
+      "price": 8000000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p61",
+      "title": "Товар для спорта 61",
+      "price": 4250000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p62",
+      "title": "Книга 62",
+      "price": 2500000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p63",
+      "title": "Товар для дома 63",
+      "price": 4250000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p64",
+      "title": "Товар для красоты 64",
+      "price": 3500000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p65",
+      "title": "Аксессуар 65",
+      "price": 2750000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p66",
+      "title": "Игрушка 66",
+      "price": 3500000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p67",
+      "title": "Ноутбук 67",
+      "price": 31750000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p68",
+      "title": "Смартфон 68",
+      "price": 17000000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p69",
+      "title": "Наушники 69",
+      "price": 7250000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p70",
+      "title": "Футболка 70",
+      "price": 3000000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p71",
+      "title": "Кроссовки 71",
+      "price": 8250000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p72",
+      "title": "Товар для спорта 72",
+      "price": 4500000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p73",
+      "title": "Книга 73",
+      "price": 2750000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p74",
+      "title": "Товар для дома 74",
+      "price": 4500000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p75",
+      "title": "Товар для красоты 75",
+      "price": 3750000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p76",
+      "title": "Аксессуар 76",
+      "price": 3000000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p77",
+      "title": "Игрушка 77",
+      "price": 3750000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p78",
+      "title": "Ноутбук 78",
+      "price": 32000000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p79",
+      "title": "Смартфон 79",
+      "price": 17250000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p80",
+      "title": "Наушники 80",
+      "price": 5000000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p81",
+      "title": "Футболка 81",
+      "price": 3250000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p82",
+      "title": "Кроссовки 82",
+      "price": 8500000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p83",
+      "title": "Товар для спорта 83",
+      "price": 4750000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p84",
+      "title": "Книга 84",
+      "price": 3000000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p85",
+      "title": "Товар для дома 85",
+      "price": 4750000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p86",
+      "title": "Товар для красоты 86",
+      "price": 4000000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p87",
+      "title": "Аксессуар 87",
+      "price": 3250000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p88",
+      "title": "Игрушка 88",
+      "price": 4000000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p89",
+      "title": "Ноутбук 89",
+      "price": 32250000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p90",
+      "title": "Смартфон 90",
+      "price": 15000000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p91",
+      "title": "Наушники 91",
+      "price": 5250000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p92",
+      "title": "Футболка 92",
+      "price": 3500000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p93",
+      "title": "Кроссовки 93",
+      "price": 8750000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p94",
+      "title": "Товар для спорта 94",
+      "price": 5000000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p95",
+      "title": "Книга 95",
+      "price": 3250000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p96",
+      "title": "Товар для дома 96",
+      "price": 5000000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p97",
+      "title": "Товар для красоты 97",
+      "price": 4250000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p98",
+      "title": "Аксессуар 98",
+      "price": 3500000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p99",
+      "title": "Игрушка 99",
+      "price": 4250000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p100",
+      "title": "Ноутбук 100",
+      "price": 30000000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p101",
+      "title": "Смартфон 101",
+      "price": 15250000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p102",
+      "title": "Наушники 102",
+      "price": 5500000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p103",
+      "title": "Футболка 103",
+      "price": 3750000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p104",
+      "title": "Кроссовки 104",
+      "price": 9000000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p105",
+      "title": "Товар для спорта 105",
+      "price": 5250000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p106",
+      "title": "Книга 106",
+      "price": 3500000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p107",
+      "title": "Товар для дома 107",
+      "price": 5250000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p108",
+      "title": "Товар для красоты 108",
+      "price": 4500000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p109",
+      "title": "Аксессуар 109",
+      "price": 3750000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
+    },
+    {
+      "id": "p110",
+      "title": "Игрушка 110",
+      "price": 2000000,
+      "category_id": "cat12",
+      "tags": [
+        "toy",
+        "kids"
+      ]
+    },
+    {
+      "id": "p111",
+      "title": "Ноутбук 111",
+      "price": 30250000,
+      "category_id": "cat2",
+      "tags": [
+        "laptop",
+        "computer"
+      ]
+    },
+    {
+      "id": "p112",
+      "title": "Смартфон 112",
+      "price": 15500000,
+      "category_id": "cat3",
+      "tags": [
+        "phone",
+        "smartphone"
+      ]
+    },
+    {
+      "id": "p113",
+      "title": "Наушники 113",
+      "price": 5750000,
+      "category_id": "cat4",
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": "p114",
+      "title": "Футболка 114",
+      "price": 4000000,
+      "category_id": "cat5",
+      "tags": [
+        "clothes",
+        "casual"
+      ]
+    },
+    {
+      "id": "p115",
+      "title": "Кроссовки 115",
+      "price": 9250000,
+      "category_id": "cat6",
+      "tags": [
+        "shoes",
+        "sport"
+      ]
+    },
+    {
+      "id": "p116",
+      "title": "Товар для спорта 116",
+      "price": 5500000,
+      "category_id": "cat7",
+      "tags": [
+        "sport",
+        "fitness"
+      ]
+    },
+    {
+      "id": "p117",
+      "title": "Книга 117",
+      "price": 3750000,
+      "category_id": "cat8",
+      "tags": [
+        "book",
+        "reading"
+      ]
+    },
+    {
+      "id": "p118",
+      "title": "Товар для дома 118",
+      "price": 5500000,
+      "category_id": "cat9",
+      "tags": [
+        "home",
+        "house"
+      ]
+    },
+    {
+      "id": "p119",
+      "title": "Товар для красоты 119",
+      "price": 4750000,
+      "category_id": "cat10",
+      "tags": [
+        "beauty",
+        "care"
+      ]
+    },
+    {
+      "id": "p120",
+      "title": "Аксессуар 120",
+      "price": 1500000,
+      "category_id": "cat11",
+      "tags": [
+        "accessory",
+        "gadget"
+      ]
     }
   ],
   "users": [
     {
       "id": "u1",
-      "name": "Ali",
+      "name": "Пользователь 1",
+      "tier": "обычный"
+    },
+    {
+      "id": "u2",
+      "name": "Пользователь 2",
+      "tier": "обычный"
+    },
+    {
+      "id": "u3",
+      "name": "Пользователь 3",
+      "tier": "обычный"
+    },
+    {
+      "id": "u4",
+      "name": "Пользователь 4",
+      "tier": "обычный"
+    },
+    {
+      "id": "u5",
+      "name": "Пользователь 5",
+      "tier": "VIP"
+    },
+    {
+      "id": "u6",
+      "name": "Пользователь 6",
+      "tier": "обычный"
+    },
+    {
+      "id": "u7",
+      "name": "Пользователь 7",
+      "tier": "обычный"
+    },
+    {
+      "id": "u8",
+      "name": "Пользователь 8",
+      "tier": "обычный"
+    },
+    {
+      "id": "u9",
+      "name": "Пользователь 9",
+      "tier": "обычный"
+    },
+    {
+      "id": "u10",
+      "name": "Пользователь 10",
+      "tier": "VIP"
+    },
+    {
+      "id": "u11",
+      "name": "Пользователь 11",
+      "tier": "обычный"
+    },
+    {
+      "id": "u12",
+      "name": "Пользователь 12",
+      "tier": "обычный"
+    },
+    {
+      "id": "u13",
+      "name": "Пользователь 13",
+      "tier": "обычный"
+    },
+    {
+      "id": "u14",
+      "name": "Пользователь 14",
+      "tier": "обычный"
+    },
+    {
+      "id": "u15",
+      "name": "Пользователь 15",
+      "tier": "VIP"
+    },
+    {
+      "id": "u16",
+      "name": "Пользователь 16",
+      "tier": "обычный"
+    },
+    {
+      "id": "u17",
+      "name": "Пользователь 17",
+      "tier": "обычный"
+    },
+    {
+      "id": "u18",
+      "name": "Пользователь 18",
+      "tier": "обычный"
+    },
+    {
+      "id": "u19",
+      "name": "Пользователь 19",
+      "tier": "обычный"
+    },
+    {
+      "id": "u20",
+      "name": "Пользователь 20",
+      "tier": "VIP"
+    },
+    {
+      "id": "u21",
+      "name": "Пользователь 21",
+      "tier": "обычный"
+    },
+    {
+      "id": "u22",
+      "name": "Пользователь 22",
+      "tier": "обычный"
+    },
+    {
+      "id": "u23",
+      "name": "Пользователь 23",
+      "tier": "обычный"
+    },
+    {
+      "id": "u24",
+      "name": "Пользователь 24",
+      "tier": "обычный"
+    },
+    {
+      "id": "u25",
+      "name": "Пользователь 25",
+      "tier": "VIP"
+    },
+    {
+      "id": "u26",
+      "name": "Пользователь 26",
+      "tier": "обычный"
+    },
+    {
+      "id": "u27",
+      "name": "Пользователь 27",
+      "tier": "обычный"
+    },
+    {
+      "id": "u28",
+      "name": "Пользователь 28",
+      "tier": "обычный"
+    },
+    {
+      "id": "u29",
+      "name": "Пользователь 29",
+      "tier": "обычный"
+    },
+    {
+      "id": "u30",
+      "name": "Пользователь 30",
+      "tier": "VIP"
+    },
+    {
+      "id": "u31",
+      "name": "Пользователь 31",
+      "tier": "обычный"
+    },
+    {
+      "id": "u32",
+      "name": "Пользователь 32",
+      "tier": "обычный"
+    },
+    {
+      "id": "u33",
+      "name": "Пользователь 33",
+      "tier": "обычный"
+    },
+    {
+      "id": "u34",
+      "name": "Пользователь 34",
+      "tier": "обычный"
+    },
+    {
+      "id": "u35",
+      "name": "Пользователь 35",
+      "tier": "VIP"
+    },
+    {
+      "id": "u36",
+      "name": "Пользователь 36",
+      "tier": "обычный"
+    },
+    {
+      "id": "u37",
+      "name": "Пользователь 37",
+      "tier": "обычный"
+    },
+    {
+      "id": "u38",
+      "name": "Пользователь 38",
+      "tier": "обычный"
+    },
+    {
+      "id": "u39",
+      "name": "Пользователь 39",
+      "tier": "обычный"
+    },
+    {
+      "id": "u40",
+      "name": "Пользователь 40",
       "tier": "VIP"
     }
   ],
-  "orders": []
+  "carts": [
+    {
+      "id": "cart1",
+      "user_id": "u1",
+      "items": [
+        [
+          "p1",
+          1
+        ],
+        [
+          "p2",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart2",
+      "user_id": "u2",
+      "items": [
+        [
+          "p2",
+          1
+        ],
+        [
+          "p3",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart3",
+      "user_id": "u3",
+      "items": [
+        [
+          "p3",
+          1
+        ],
+        [
+          "p4",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart4",
+      "user_id": "u4",
+      "items": [
+        [
+          "p4",
+          1
+        ],
+        [
+          "p5",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart5",
+      "user_id": "u5",
+      "items": [
+        [
+          "p5",
+          1
+        ],
+        [
+          "p6",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart6",
+      "user_id": "u6",
+      "items": [
+        [
+          "p6",
+          1
+        ],
+        [
+          "p7",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart7",
+      "user_id": "u7",
+      "items": [
+        [
+          "p7",
+          1
+        ],
+        [
+          "p8",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart8",
+      "user_id": "u8",
+      "items": [
+        [
+          "p8",
+          1
+        ],
+        [
+          "p9",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart9",
+      "user_id": "u9",
+      "items": [
+        [
+          "p9",
+          1
+        ],
+        [
+          "p10",
+          2
+        ]
+      ]
+    },
+    {
+      "id": "cart10",
+      "user_id": "u10",
+      "items": [
+        [
+          "p10",
+          1
+        ],
+        [
+          "p11",
+          2
+        ]
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "order1",
+      "user_id": "u1",
+      "items": [
+        [
+          "p1",
+          2
+        ],
+        [
+          "p2",
+          2
+        ]
+      ],
+      "total": 91500000,
+      "ts": "2026-09-01T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order2",
+      "user_id": "u2",
+      "items": [
+        [
+          "p2",
+          3
+        ],
+        [
+          "p3",
+          1
+        ]
+      ],
+      "total": 52250000,
+      "ts": "2026-09-02T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order3",
+      "user_id": "u3",
+      "items": [
+        [
+          "p3",
+          1
+        ],
+        [
+          "p4",
+          2
+        ]
+      ],
+      "total": 13750000,
+      "ts": "2026-09-03T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order4",
+      "user_id": "u4",
+      "items": [
+        [
+          "p4",
+          2
+        ],
+        [
+          "p5",
+          1
+        ]
+      ],
+      "total": 17250000,
+      "ts": "2026-09-04T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order5",
+      "user_id": "u5",
+      "items": [
+        [
+          "p5",
+          3
+        ],
+        [
+          "p6",
+          2
+        ]
+      ],
+      "total": 38750000,
+      "ts": "2026-09-05T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order6",
+      "user_id": "u6",
+      "items": [
+        [
+          "p6",
+          1
+        ],
+        [
+          "p7",
+          1
+        ]
+      ],
+      "total": 9250000,
+      "ts": "2026-09-06T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order7",
+      "user_id": "u7",
+      "items": [
+        [
+          "p7",
+          2
+        ],
+        [
+          "p8",
+          2
+        ]
+      ],
+      "total": 18500000,
+      "ts": "2026-09-07T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order8",
+      "user_id": "u8",
+      "items": [
+        [
+          "p8",
+          3
+        ],
+        [
+          "p9",
+          1
+        ]
+      ],
+      "total": 21250000,
+      "ts": "2026-09-08T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order9",
+      "user_id": "u9",
+      "items": [
+        [
+          "p9",
+          1
+        ],
+        [
+          "p10",
+          2
+        ]
+      ],
+      "total": 7750000,
+      "ts": "2026-09-09T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order10",
+      "user_id": "u10",
+      "items": [
+        [
+          "p10",
+          2
+        ],
+        [
+          "p11",
+          1
+        ]
+      ],
+      "total": 5250000,
+      "ts": "2026-09-10T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order11",
+      "user_id": "u11",
+      "items": [
+        [
+          "p11",
+          3
+        ],
+        [
+          "p12",
+          2
+        ]
+      ],
+      "total": 67750000,
+      "ts": "2026-09-11T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order12",
+      "user_id": "u12",
+      "items": [
+        [
+          "p12",
+          1
+        ],
+        [
+          "p13",
+          1
+        ]
+      ],
+      "total": 46250000,
+      "ts": "2026-09-12T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order13",
+      "user_id": "u13",
+      "items": [
+        [
+          "p13",
+          2
+        ],
+        [
+          "p14",
+          2
+        ]
+      ],
+      "total": 43500000,
+      "ts": "2026-09-13T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order14",
+      "user_id": "u14",
+      "items": [
+        [
+          "p14",
+          3
+        ],
+        [
+          "p15",
+          1
+        ]
+      ],
+      "total": 22250000,
+      "ts": "2026-09-14T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order15",
+      "user_id": "u15",
+      "items": [
+        [
+          "p15",
+          1
+        ],
+        [
+          "p16",
+          2
+        ]
+      ],
+      "total": 23250000,
+      "ts": "2026-09-15T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order16",
+      "user_id": "u16",
+      "items": [
+        [
+          "p16",
+          2
+        ],
+        [
+          "p17",
+          1
+        ]
+      ],
+      "total": 24750000,
+      "ts": "2026-09-16T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order17",
+      "user_id": "u17",
+      "items": [
+        [
+          "p17",
+          3
+        ],
+        [
+          "p18",
+          2
+        ]
+      ],
+      "total": 25250000,
+      "ts": "2026-09-17T11:00:00",
+      "status": "refunded"
+    },
+    {
+      "id": "order18",
+      "user_id": "u18",
+      "items": [
+        [
+          "p18",
+          1
+        ],
+        [
+          "p19",
+          1
+        ]
+      ],
+      "total": 9750000,
+      "ts": "2026-09-18T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order19",
+      "user_id": "u19",
+      "items": [
+        [
+          "p19",
+          2
+        ],
+        [
+          "p20",
+          2
+        ]
+      ],
+      "total": 16500000,
+      "ts": "2026-09-19T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order20",
+      "user_id": "u20",
+      "items": [
+        [
+          "p20",
+          3
+        ],
+        [
+          "p21",
+          1
+        ]
+      ],
+      "total": 9250000,
+      "ts": "2026-09-20T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order21",
+      "user_id": "u21",
+      "items": [
+        [
+          "p21",
+          1
+        ],
+        [
+          "p22",
+          2
+        ]
+      ],
+      "total": 6750000,
+      "ts": "2026-09-21T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order22",
+      "user_id": "u22",
+      "items": [
+        [
+          "p22",
+          2
+        ],
+        [
+          "p23",
+          1
+        ]
+      ],
+      "total": 35750000,
+      "ts": "2026-09-22T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order23",
+      "user_id": "u23",
+      "items": [
+        [
+          "p23",
+          3
+        ],
+        [
+          "p24",
+          2
+        ]
+      ],
+      "total": 124250000,
+      "ts": "2026-09-23T17:00:00",
+      "status": "cancelled"
+    },
+    {
+      "id": "order24",
+      "user_id": "u24",
+      "items": [
+        [
+          "p24",
+          1
+        ],
+        [
+          "p25",
+          1
+        ]
+      ],
+      "total": 22250000,
+      "ts": "2026-09-24T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order25",
+      "user_id": "u25",
+      "items": [
+        [
+          "p25",
+          2
+        ],
+        [
+          "p26",
+          2
+        ]
+      ],
+      "total": 21500000,
+      "ts": "2026-09-25T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order26",
+      "user_id": "u26",
+      "items": [
+        [
+          "p26",
+          3
+        ],
+        [
+          "p27",
+          1
+        ]
+      ],
+      "total": 23250000,
+      "ts": "2026-09-01T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order27",
+      "user_id": "u27",
+      "items": [
+        [
+          "p27",
+          1
+        ],
+        [
+          "p28",
+          2
+        ]
+      ],
+      "total": 21750000,
+      "ts": "2026-09-02T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order28",
+      "user_id": "u28",
+      "items": [
+        [
+          "p28",
+          2
+        ],
+        [
+          "p29",
+          1
+        ]
+      ],
+      "total": 16250000,
+      "ts": "2026-09-03T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order29",
+      "user_id": "u29",
+      "items": [
+        [
+          "p29",
+          3
+        ],
+        [
+          "p30",
+          2
+        ]
+      ],
+      "total": 19750000,
+      "ts": "2026-09-04T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order30",
+      "user_id": "u30",
+      "items": [
+        [
+          "p30",
+          1
+        ],
+        [
+          "p31",
+          1
+        ]
+      ],
+      "total": 6250000,
+      "ts": "2026-09-05T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order31",
+      "user_id": "u31",
+      "items": [
+        [
+          "p31",
+          2
+        ],
+        [
+          "p32",
+          2
+        ]
+      ],
+      "total": 9500000,
+      "ts": "2026-09-06T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order32",
+      "user_id": "u32",
+      "items": [
+        [
+          "p32",
+          3
+        ],
+        [
+          "p33",
+          1
+        ]
+      ],
+      "total": 8750000,
+      "ts": "2026-09-07T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order33",
+      "user_id": "u33",
+      "items": [
+        [
+          "p33",
+          1
+        ],
+        [
+          "p34",
+          2
+        ]
+      ],
+      "total": 64750000,
+      "ts": "2026-09-08T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order34",
+      "user_id": "u34",
+      "items": [
+        [
+          "p34",
+          2
+        ],
+        [
+          "p35",
+          1
+        ]
+      ],
+      "total": 78250000,
+      "ts": "2026-09-09T12:00:00",
+      "status": "refunded"
+    },
+    {
+      "id": "order35",
+      "user_id": "u35",
+      "items": [
+        [
+          "p35",
+          3
+        ],
+        [
+          "p36",
+          2
+        ]
+      ],
+      "total": 61750000,
+      "ts": "2026-09-10T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order36",
+      "user_id": "u36",
+      "items": [
+        [
+          "p36",
+          1
+        ],
+        [
+          "p37",
+          1
+        ]
+      ],
+      "total": 11250000,
+      "ts": "2026-09-11T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order37",
+      "user_id": "u37",
+      "items": [
+        [
+          "p37",
+          2
+        ],
+        [
+          "p38",
+          2
+        ]
+      ],
+      "total": 29500000,
+      "ts": "2026-09-12T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order38",
+      "user_id": "u38",
+      "items": [
+        [
+          "p38",
+          3
+        ],
+        [
+          "p39",
+          1
+        ]
+      ],
+      "total": 36250000,
+      "ts": "2026-09-13T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order39",
+      "user_id": "u39",
+      "items": [
+        [
+          "p39",
+          1
+        ],
+        [
+          "p40",
+          2
+        ]
+      ],
+      "total": 10250000,
+      "ts": "2026-09-14T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order40",
+      "user_id": "u40",
+      "items": [
+        [
+          "p40",
+          2
+        ],
+        [
+          "p41",
+          1
+        ]
+      ],
+      "total": 7750000,
+      "ts": "2026-09-15T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order41",
+      "user_id": "u1",
+      "items": [
+        [
+          "p41",
+          3
+        ],
+        [
+          "p42",
+          2
+        ]
+      ],
+      "total": 17250000,
+      "ts": "2026-09-16T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order42",
+      "user_id": "u2",
+      "items": [
+        [
+          "p42",
+          1
+        ],
+        [
+          "p43",
+          1
+        ]
+      ],
+      "total": 5250000,
+      "ts": "2026-09-17T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order43",
+      "user_id": "u3",
+      "items": [
+        [
+          "p43",
+          2
+        ],
+        [
+          "p44",
+          2
+        ]
+      ],
+      "total": 10500000,
+      "ts": "2026-09-18T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order44",
+      "user_id": "u4",
+      "items": [
+        [
+          "p44",
+          3
+        ],
+        [
+          "p45",
+          1
+        ]
+      ],
+      "total": 40250000,
+      "ts": "2026-09-19T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order45",
+      "user_id": "u5",
+      "items": [
+        [
+          "p45",
+          1
+        ],
+        [
+          "p46",
+          2
+        ]
+      ],
+      "total": 64250000,
+      "ts": "2026-09-20T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order46",
+      "user_id": "u6",
+      "items": [
+        [
+          "p46",
+          2
+        ],
+        [
+          "p47",
+          1
+        ]
+      ],
+      "total": 39750000,
+      "ts": "2026-09-21T16:00:00",
+      "status": "cancelled"
+    },
+    {
+      "id": "order47",
+      "user_id": "u7",
+      "items": [
+        [
+          "p47",
+          3
+        ],
+        [
+          "p48",
+          2
+        ]
+      ],
+      "total": 30250000,
+      "ts": "2026-09-22T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order48",
+      "user_id": "u8",
+      "items": [
+        [
+          "p48",
+          1
+        ],
+        [
+          "p49",
+          1
+        ]
+      ],
+      "total": 15250000,
+      "ts": "2026-09-23T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order49",
+      "user_id": "u9",
+      "items": [
+        [
+          "p49",
+          2
+        ],
+        [
+          "p50",
+          2
+        ]
+      ],
+      "total": 28500000,
+      "ts": "2026-09-24T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order50",
+      "user_id": "u10",
+      "items": [
+        [
+          "p50",
+          3
+        ],
+        [
+          "p51",
+          1
+        ]
+      ],
+      "total": 14250000,
+      "ts": "2026-09-25T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order51",
+      "user_id": "u11",
+      "items": [
+        [
+          "p51",
+          1
+        ],
+        [
+          "p52",
+          2
+        ]
+      ],
+      "total": 10250000,
+      "ts": "2026-09-01T13:00:00",
+      "status": "refunded"
+    },
+    {
+      "id": "order52",
+      "user_id": "u12",
+      "items": [
+        [
+          "p52",
+          2
+        ],
+        [
+          "p53",
+          1
+        ]
+      ],
+      "total": 11250000,
+      "ts": "2026-09-02T14:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order53",
+      "user_id": "u13",
+      "items": [
+        [
+          "p53",
+          3
+        ],
+        [
+          "p54",
+          2
+        ]
+      ],
+      "total": 14750000,
+      "ts": "2026-09-03T15:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order54",
+      "user_id": "u14",
+      "items": [
+        [
+          "p54",
+          1
+        ],
+        [
+          "p55",
+          1
+        ]
+      ],
+      "total": 5750000,
+      "ts": "2026-09-04T16:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order55",
+      "user_id": "u15",
+      "items": [
+        [
+          "p55",
+          2
+        ],
+        [
+          "p56",
+          2
+        ]
+      ],
+      "total": 69500000,
+      "ts": "2026-09-05T17:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order56",
+      "user_id": "u16",
+      "items": [
+        [
+          "p56",
+          3
+        ],
+        [
+          "p57",
+          1
+        ]
+      ],
+      "total": 111250000,
+      "ts": "2026-09-06T10:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order57",
+      "user_id": "u17",
+      "items": [
+        [
+          "p57",
+          1
+        ],
+        [
+          "p58",
+          2
+        ]
+      ],
+      "total": 30750000,
+      "ts": "2026-09-07T11:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order58",
+      "user_id": "u18",
+      "items": [
+        [
+          "p58",
+          2
+        ],
+        [
+          "p59",
+          1
+        ]
+      ],
+      "total": 19250000,
+      "ts": "2026-09-08T12:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order59",
+      "user_id": "u19",
+      "items": [
+        [
+          "p59",
+          3
+        ],
+        [
+          "p60",
+          2
+        ]
+      ],
+      "total": 31750000,
+      "ts": "2026-09-09T13:00:00",
+      "status": "paid"
+    },
+    {
+      "id": "order60",
+      "user_id": "u20",
+      "items": [
+        [
+          "p60",
+          1
+        ],
+        [
+          "p61",
+          1
+        ]
+      ],
+      "total": 12250000,
+      "ts": "2026-09-10T14:00:00",
+      "status": "paid"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay1",
+      "order_id": "order1",
+      "amount": 91500000,
+      "ts": "2026-09-01T11:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay2",
+      "order_id": "order2",
+      "amount": 52250000,
+      "ts": "2026-09-02T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay3",
+      "order_id": "order3",
+      "amount": 13750000,
+      "ts": "2026-09-03T13:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay4",
+      "order_id": "order4",
+      "amount": 17250000,
+      "ts": "2026-09-04T14:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay5",
+      "order_id": "order5",
+      "amount": 38750000,
+      "ts": "2026-09-05T15:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay6",
+      "order_id": "order6",
+      "amount": 9250000,
+      "ts": "2026-09-06T16:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay7",
+      "order_id": "order7",
+      "amount": 18500000,
+      "ts": "2026-09-07T17:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay8",
+      "order_id": "order8",
+      "amount": 21250000,
+      "ts": "2026-09-08T10:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay9",
+      "order_id": "order9",
+      "amount": 7750000,
+      "ts": "2026-09-09T11:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay10",
+      "order_id": "order10",
+      "amount": 5250000,
+      "ts": "2026-09-10T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay11",
+      "order_id": "order11",
+      "amount": 67750000,
+      "ts": "2026-09-11T13:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay12",
+      "order_id": "order12",
+      "amount": 46250000,
+      "ts": "2026-09-12T14:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay13",
+      "order_id": "order13",
+      "amount": 43500000,
+      "ts": "2026-09-13T15:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay14",
+      "order_id": "order14",
+      "amount": 22250000,
+      "ts": "2026-09-14T16:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay15",
+      "order_id": "order15",
+      "amount": 23250000,
+      "ts": "2026-09-15T17:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay16",
+      "order_id": "order16",
+      "amount": 24750000,
+      "ts": "2026-09-16T10:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay17",
+      "order_id": "order17",
+      "amount": 25250000,
+      "ts": "2026-09-17T11:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay18",
+      "order_id": "order18",
+      "amount": 9750000,
+      "ts": "2026-09-18T12:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay19",
+      "order_id": "order19",
+      "amount": 16500000,
+      "ts": "2026-09-19T13:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay20",
+      "order_id": "order20",
+      "amount": 9250000,
+      "ts": "2026-09-20T14:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay21",
+      "order_id": "order21",
+      "amount": 6750000,
+      "ts": "2026-09-21T15:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay22",
+      "order_id": "order22",
+      "amount": 35750000,
+      "ts": "2026-09-22T16:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay24",
+      "order_id": "order24",
+      "amount": 22250000,
+      "ts": "2026-09-24T10:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay25",
+      "order_id": "order25",
+      "amount": 21500000,
+      "ts": "2026-09-25T11:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay26",
+      "order_id": "order26",
+      "amount": 23250000,
+      "ts": "2026-09-01T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay27",
+      "order_id": "order27",
+      "amount": 21750000,
+      "ts": "2026-09-02T13:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay28",
+      "order_id": "order28",
+      "amount": 16250000,
+      "ts": "2026-09-03T14:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay29",
+      "order_id": "order29",
+      "amount": 19750000,
+      "ts": "2026-09-04T15:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay30",
+      "order_id": "order30",
+      "amount": 6250000,
+      "ts": "2026-09-05T16:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay31",
+      "order_id": "order31",
+      "amount": 9500000,
+      "ts": "2026-09-06T17:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay32",
+      "order_id": "order32",
+      "amount": 8750000,
+      "ts": "2026-09-07T10:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay33",
+      "order_id": "order33",
+      "amount": 64750000,
+      "ts": "2026-09-08T11:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay34",
+      "order_id": "order34",
+      "amount": 78250000,
+      "ts": "2026-09-09T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay35",
+      "order_id": "order35",
+      "amount": 61750000,
+      "ts": "2026-09-10T13:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay36",
+      "order_id": "order36",
+      "amount": 11250000,
+      "ts": "2026-09-11T14:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay37",
+      "order_id": "order37",
+      "amount": 29500000,
+      "ts": "2026-09-12T15:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay38",
+      "order_id": "order38",
+      "amount": 36250000,
+      "ts": "2026-09-13T16:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay39",
+      "order_id": "order39",
+      "amount": 10250000,
+      "ts": "2026-09-14T17:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay40",
+      "order_id": "order40",
+      "amount": 7750000,
+      "ts": "2026-09-15T10:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay41",
+      "order_id": "order41",
+      "amount": 17250000,
+      "ts": "2026-09-16T11:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay42",
+      "order_id": "order42",
+      "amount": 5250000,
+      "ts": "2026-09-17T12:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay43",
+      "order_id": "order43",
+      "amount": 10500000,
+      "ts": "2026-09-18T13:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay44",
+      "order_id": "order44",
+      "amount": 40250000,
+      "ts": "2026-09-19T14:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay45",
+      "order_id": "order45",
+      "amount": 64250000,
+      "ts": "2026-09-20T15:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay47",
+      "order_id": "order47",
+      "amount": 30250000,
+      "ts": "2026-09-22T17:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay48",
+      "order_id": "order48",
+      "amount": 15250000,
+      "ts": "2026-09-23T10:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay49",
+      "order_id": "order49",
+      "amount": 28500000,
+      "ts": "2026-09-24T11:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay50",
+      "order_id": "order50",
+      "amount": 14250000,
+      "ts": "2026-09-25T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay51",
+      "order_id": "order51",
+      "amount": 10250000,
+      "ts": "2026-09-01T13:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay52",
+      "order_id": "order52",
+      "amount": 11250000,
+      "ts": "2026-09-02T14:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay53",
+      "order_id": "order53",
+      "amount": 14750000,
+      "ts": "2026-09-03T15:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay54",
+      "order_id": "order54",
+      "amount": 5750000,
+      "ts": "2026-09-04T16:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay55",
+      "order_id": "order55",
+      "amount": 69500000,
+      "ts": "2026-09-05T17:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay56",
+      "order_id": "order56",
+      "amount": 111250000,
+      "ts": "2026-09-06T10:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay57",
+      "order_id": "order57",
+      "amount": 30750000,
+      "ts": "2026-09-07T11:02:00",
+      "method": "cash"
+    },
+    {
+      "id": "pay58",
+      "order_id": "order58",
+      "amount": 19250000,
+      "ts": "2026-09-08T12:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay59",
+      "order_id": "order59",
+      "amount": 31750000,
+      "ts": "2026-09-09T13:02:00",
+      "method": "card"
+    },
+    {
+      "id": "pay60",
+      "order_id": "order60",
+      "amount": 12250000,
+      "ts": "2026-09-10T14:02:00",
+      "method": "cash"
+    }
+  ],
+  "events": [
+    {
+      "id": "event1",
+      "ts": "2026-09-01T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u1",
+        "order_id": "order1"
+      }
+    },
+    {
+      "id": "event2",
+      "ts": "2026-09-02T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u2",
+        "order_id": "order2"
+      }
+    },
+    {
+      "id": "event3",
+      "ts": "2026-09-03T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u3",
+        "order_id": "order3"
+      }
+    },
+    {
+      "id": "event4",
+      "ts": "2026-09-04T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u4",
+        "order_id": "order4"
+      }
+    },
+    {
+      "id": "event5",
+      "ts": "2026-09-05T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u5",
+        "order_id": "order5"
+      }
+    },
+    {
+      "id": "event6",
+      "ts": "2026-09-06T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u6",
+        "order_id": "order6"
+      }
+    },
+    {
+      "id": "event7",
+      "ts": "2026-09-07T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u7",
+        "order_id": "order7"
+      }
+    },
+    {
+      "id": "event8",
+      "ts": "2026-09-08T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u8",
+        "order_id": "order8"
+      }
+    },
+    {
+      "id": "event9",
+      "ts": "2026-09-09T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u9",
+        "order_id": "order9"
+      }
+    },
+    {
+      "id": "event10",
+      "ts": "2026-09-10T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u10",
+        "order_id": "order10"
+      }
+    },
+    {
+      "id": "event11",
+      "ts": "2026-09-11T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u11",
+        "order_id": "order11"
+      }
+    },
+    {
+      "id": "event12",
+      "ts": "2026-09-12T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u12",
+        "order_id": "order12"
+      }
+    },
+    {
+      "id": "event13",
+      "ts": "2026-09-13T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u13",
+        "order_id": "order13"
+      }
+    },
+    {
+      "id": "event14",
+      "ts": "2026-09-14T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u14",
+        "order_id": "order14"
+      }
+    },
+    {
+      "id": "event15",
+      "ts": "2026-09-15T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u15",
+        "order_id": "order15"
+      }
+    },
+    {
+      "id": "event16",
+      "ts": "2026-09-16T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u16",
+        "order_id": "order16"
+      }
+    },
+    {
+      "id": "event17",
+      "ts": "2026-09-17T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u17",
+        "order_id": "order17"
+      }
+    },
+    {
+      "id": "event18",
+      "ts": "2026-09-18T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u18",
+        "order_id": "order18"
+      }
+    },
+    {
+      "id": "event19",
+      "ts": "2026-09-19T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u19",
+        "order_id": "order19"
+      }
+    },
+    {
+      "id": "event20",
+      "ts": "2026-09-20T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u20",
+        "order_id": "order20"
+      }
+    },
+    {
+      "id": "event21",
+      "ts": "2026-09-21T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u21",
+        "order_id": "order21"
+      }
+    },
+    {
+      "id": "event22",
+      "ts": "2026-09-22T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u22",
+        "order_id": "order22"
+      }
+    },
+    {
+      "id": "event23",
+      "ts": "2026-09-23T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u23",
+        "order_id": "order23"
+      }
+    },
+    {
+      "id": "event24",
+      "ts": "2026-09-24T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u24",
+        "order_id": "order24"
+      }
+    },
+    {
+      "id": "event25",
+      "ts": "2026-09-25T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u25",
+        "order_id": "order25"
+      }
+    },
+    {
+      "id": "event26",
+      "ts": "2026-09-01T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u26",
+        "order_id": "order26"
+      }
+    },
+    {
+      "id": "event27",
+      "ts": "2026-09-02T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u27",
+        "order_id": "order27"
+      }
+    },
+    {
+      "id": "event28",
+      "ts": "2026-09-03T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u28",
+        "order_id": "order28"
+      }
+    },
+    {
+      "id": "event29",
+      "ts": "2026-09-04T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u29",
+        "order_id": "order29"
+      }
+    },
+    {
+      "id": "event30",
+      "ts": "2026-09-05T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u30",
+        "order_id": "order30"
+      }
+    },
+    {
+      "id": "event31",
+      "ts": "2026-09-06T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u31",
+        "order_id": "order31"
+      }
+    },
+    {
+      "id": "event32",
+      "ts": "2026-09-07T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u32",
+        "order_id": "order32"
+      }
+    },
+    {
+      "id": "event33",
+      "ts": "2026-09-08T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u33",
+        "order_id": "order33"
+      }
+    },
+    {
+      "id": "event34",
+      "ts": "2026-09-09T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u34",
+        "order_id": "order34"
+      }
+    },
+    {
+      "id": "event35",
+      "ts": "2026-09-10T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u35",
+        "order_id": "order35"
+      }
+    },
+    {
+      "id": "event36",
+      "ts": "2026-09-11T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u36",
+        "order_id": "order36"
+      }
+    },
+    {
+      "id": "event37",
+      "ts": "2026-09-12T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u37",
+        "order_id": "order37"
+      }
+    },
+    {
+      "id": "event38",
+      "ts": "2026-09-13T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u38",
+        "order_id": "order38"
+      }
+    },
+    {
+      "id": "event39",
+      "ts": "2026-09-14T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u39",
+        "order_id": "order39"
+      }
+    },
+    {
+      "id": "event40",
+      "ts": "2026-09-15T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u40",
+        "order_id": "order40"
+      }
+    },
+    {
+      "id": "event41",
+      "ts": "2026-09-16T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u1",
+        "order_id": "order41"
+      }
+    },
+    {
+      "id": "event42",
+      "ts": "2026-09-17T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u2",
+        "order_id": "order42"
+      }
+    },
+    {
+      "id": "event43",
+      "ts": "2026-09-18T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u3",
+        "order_id": "order43"
+      }
+    },
+    {
+      "id": "event44",
+      "ts": "2026-09-19T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u4",
+        "order_id": "order44"
+      }
+    },
+    {
+      "id": "event45",
+      "ts": "2026-09-20T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u5",
+        "order_id": "order45"
+      }
+    },
+    {
+      "id": "event46",
+      "ts": "2026-09-21T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u6",
+        "order_id": "order46"
+      }
+    },
+    {
+      "id": "event47",
+      "ts": "2026-09-22T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u7",
+        "order_id": "order47"
+      }
+    },
+    {
+      "id": "event48",
+      "ts": "2026-09-23T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u8",
+        "order_id": "order48"
+      }
+    },
+    {
+      "id": "event49",
+      "ts": "2026-09-24T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u9",
+        "order_id": "order49"
+      }
+    },
+    {
+      "id": "event50",
+      "ts": "2026-09-25T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u10",
+        "order_id": "order50"
+      }
+    },
+    {
+      "id": "event51",
+      "ts": "2026-09-01T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u11",
+        "order_id": "order51"
+      }
+    },
+    {
+      "id": "event52",
+      "ts": "2026-09-02T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u12",
+        "order_id": "order52"
+      }
+    },
+    {
+      "id": "event53",
+      "ts": "2026-09-03T14:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u13",
+        "order_id": "order53"
+      }
+    },
+    {
+      "id": "event54",
+      "ts": "2026-09-04T15:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u14",
+        "order_id": "order54"
+      }
+    },
+    {
+      "id": "event55",
+      "ts": "2026-09-05T16:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u15",
+        "order_id": "order55"
+      }
+    },
+    {
+      "id": "event56",
+      "ts": "2026-09-06T09:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u16",
+        "order_id": "order56"
+      }
+    },
+    {
+      "id": "event57",
+      "ts": "2026-09-07T10:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u17",
+        "order_id": "order57"
+      }
+    },
+    {
+      "id": "event58",
+      "ts": "2026-09-08T11:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u18",
+        "order_id": "order58"
+      }
+    },
+    {
+      "id": "event59",
+      "ts": "2026-09-09T12:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u19",
+        "order_id": "order59"
+      }
+    },
+    {
+      "id": "event60",
+      "ts": "2026-09-10T13:50:00",
+      "name": "CHECKOUT",
+      "payload": {
+        "user_id": "u20",
+        "order_id": "order60"
+      }
+    }
+  ],
+  "discounts": [
+    {
+      "id": "discount1",
+      "code": "SALE10",
+      "percent": 10,
+      "conditions": {
+        "min_total": 10000000
+      }
+    },
+    {
+      "id": "discount2",
+      "code": "VIP15",
+      "percent": 15,
+      "conditions": {
+        "tier": "VIP"
+      }
+    },
+    {
+      "id": "discount3",
+      "code": "SALE5",
+      "percent": 5,
+      "conditions": {
+        "min_total": 5000000
+      }
+    }
+  ]
 }

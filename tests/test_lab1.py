@@ -1,33 +1,47 @@
 from core.domain import Cart, Order
 from core.transforms import (
     add_to_cart,
-    remove_from_cart,
     checkout,
+    remove_from_cart,
     total_sales,
 )
 
 
 def test_add_to_cart():
-    cart = Cart("c1", "u1", ())
+    cart = Cart(
+        id="cart1",
+        user_id="u1",
+        items=(("p1", 2),),
+    )
 
-    new_cart = add_to_cart(cart, "p1", 2)
+    new_cart = add_to_cart(cart, "p2", 1)
 
-    assert new_cart.items == (("p1", 2),)
+    assert new_cart.items == (
+        ("p1", 2),
+        ("p2", 1),
+    )
 
 
-def test_add_existing_product():
-    cart = Cart("c1", "u1", (("p1", 2),))
+def test_add_to_cart_does_not_change_old_cart():
+    cart = Cart(
+        id="cart1",
+        user_id="u1",
+        items=(("p1", 2),),
+    )
 
-    new_cart = add_to_cart(cart, "p1", 3)
+    add_to_cart(cart, "p2", 1)
 
-    assert new_cart.items == (("p1", 5),)
+    assert cart.items == (("p1", 2),)
 
 
 def test_remove_from_cart():
     cart = Cart(
-        "c1",
-        "u1",
-        (("p1", 2), ("p2", 1)),
+        id="cart1",
+        user_id="u1",
+        items=(
+            ("p1", 2),
+            ("p2", 1),
+        ),
     )
 
     new_cart = remove_from_cart(cart, "p1")
@@ -35,19 +49,42 @@ def test_remove_from_cart():
     assert new_cart.items == (("p2", 1),)
 
 
-def test_cart_is_immutable():
-    cart = Cart("c1", "u1", ())
+def test_checkout():
+    cart = Cart(
+        id="cart1",
+        user_id="u1",
+        items=(("p1", 2),),
+    )
 
-    new_cart = add_to_cart(cart, "p1", 2)
+    order = checkout(
+        cart,
+        "2026-09-26T16:00:00",
+    )
 
-    assert cart.items == ()
-    assert new_cart.items == (("p1", 2),)
+    assert isinstance(order, Order)
+    assert order.user_id == "u1"
+    assert order.items == (("p1", 2),)
+    assert order.status == "paid"
 
 
 def test_total_sales():
     orders = (
-        Order("o1", "u1", (), 1000, "2026-09-22", "paid"),
-        Order("o2", "u2", (), 2000, "2026-09-22", "paid"),
+        Order(
+            id="order1",
+            user_id="u1",
+            items=(("p1", 1),),
+            total=1000,
+            ts="2026-09-20",
+            status="paid",
+        ),
+        Order(
+            id="order2",
+            user_id="u2",
+            items=(("p2", 1),),
+            total=2000,
+            ts="2026-09-21",
+            status="paid",
+        ),
     )
 
     assert total_sales(orders) == 3000

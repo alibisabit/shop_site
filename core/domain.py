@@ -39,3 +39,28 @@ class Order:
     total: int
     ts: str
     status: str
+
+
+@dataclass(frozen=True)
+class Payment:
+    id: str
+    order_id: str
+    amount: int
+    ts: str
+    method: str
+
+
+@dataclass(frozen=True)
+class Event:
+    id: str
+    ts: str
+    name: str
+    payload: dict
+
+
+@dataclass(frozen=True)
+class Discount:
+    id: str
+    code: str
+    percent: int
+    conditions: dict
