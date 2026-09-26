@@ -1,5 +1,8 @@
+import time
+
 import streamlit as st
 
+from core.memo import top_products
 from core.recursion import collect_products_recursive
 from core.transforms import (
     by_price_range,
@@ -22,6 +25,7 @@ menu = st.sidebar.selectbox(
         "Overview",
         "Data",
         "Functional Core",
+        "Reports",
     ],
 )
 
@@ -179,6 +183,69 @@ elif menu == "Functional Core":
                 "Теги": ", ".join(product.tags),
             }
             for product in filtered_products
+        ],
+        use_container_width=True,
+    )
+
+elif menu == "Reports":
+    st.header("Reports")
+
+    st.subheader("Top Products (cached)")
+
+    k = st.slider(
+        "Количество товаров",
+        min_value=1,
+        max_value=10,
+        value=5,
+    )
+
+    top_products.cache_clear()
+
+    start_time = time.perf_counter()
+
+    first_result = top_products(
+        orders,
+        products,
+        k,
+    )
+
+    first_time = (time.perf_counter() - start_time) * 1000
+
+    start_time = time.perf_counter()
+
+    second_result = top_products(
+        orders,
+        products,
+        k,
+    )
+
+    second_time = (time.perf_counter() - start_time) * 1000
+
+    col1, col2 = st.columns(2)
+
+    col1.metric(
+        "Первый вызов",
+        f"{first_time:.4f} ms",
+    )
+
+    col2.metric(
+        "Второй вызов (кэш)",
+        f"{second_time:.4f} ms",
+    )
+
+    st.write(f"Попаданий в кэш: {top_products.cache_info().hits}")
+
+    st.subheader("Бестселлеры")
+
+    st.dataframe(
+        [
+            {
+                "ID": product.id,
+                "Название": product.title,
+                "Цена": f"{product.price / 100:.2f} ₽",
+                "Категория": product.category_id,
+            }
+            for product in second_result
         ],
         use_container_width=True,
     )
