@@ -3,6 +3,7 @@ import time
 import streamlit as st
 
 from core.ftypes import safe_product, validate_order
+from core.lazy import iter_orders_by_day, lazy_top_customers
 from core.memo import top_products
 from core.recursion import collect_products_recursive
 from core.transforms import (
@@ -27,6 +28,7 @@ menu = st.sidebar.selectbox(
         "Data",
         "Functional Core",
         "Maybe / Either",
+        "Pipelines",
         "Reports",
     ],
 )
@@ -245,7 +247,82 @@ elif menu == "Maybe / Either":
         st.write(f"Заказ {selected_order.id} " f"можно обработать.")
     else:
         st.error(f"Ошибка проверки: {validation_result.error}")
+elif menu == "Pipelines":  # 5 лаба
+    st.header("Pipelines")
 
+    st.subheader("Ленивые вычисления")
+
+    st.write(
+        "Генераторы обрабатывают заказы без создания полной " "промежуточной коллекции."
+    )
+
+    days = sorted({order.ts[:10] for order in orders})
+
+    selected_day = st.selectbox(
+        "Выберите день",
+        days,
+    )
+
+    day_orders = iter_orders_by_day(
+        orders,
+        selected_day,
+    )
+
+    st.write(
+        "Тип результата:",
+        type(day_orders).__name__,
+    )
+
+    selected_orders = list(day_orders)
+
+    st.write(f"Заказов за {selected_day}: {len(selected_orders)}")
+
+    if selected_orders:
+        st.dataframe(
+            [
+                {
+                    "ID": order.id,
+                    "Пользователь": order.user_id,
+                    "Сумма": f"{order.total / 100:.2f}",
+                    "Дата": order.ts,
+                    "Статус": order.status,
+                }
+                for order in selected_orders
+            ],
+            use_container_width=True,
+        )
+
+    st.subheader("Top Customers")
+
+    customer_k = st.slider(
+        "Количество пользователей",
+        min_value=1,
+        max_value=10,
+        value=5,
+    )
+
+    customers = lazy_top_customers(
+        orders,
+        customer_k,
+    )
+
+    st.write(
+        "Тип результата:",
+        type(customers).__name__,
+    )
+
+    top_customers = list(customers)
+
+    st.dataframe(
+        [
+            {
+                "Пользователь": user_id,
+                "Сумма заказов": f"{total / 100:.2f}",
+            }
+            for user_id, total in top_customers
+        ],
+        use_container_width=True,
+    )
 elif menu == "Reports":
     st.header("Reports")
 
