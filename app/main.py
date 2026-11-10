@@ -3,6 +3,8 @@ import time
 import streamlit as st
 
 from core.ftypes import safe_product, validate_order
+from core.frp import create_store_bus
+from core.service import AnalyticsService, CatalogService, OrderService
 from core.lazy import iter_orders_by_day, lazy_top_customers
 from core.memo import top_products
 from core.recursion import collect_products_recursive
@@ -29,6 +31,8 @@ menu = st.sidebar.selectbox(
         "Functional Core",
         "Maybe / Either",
         "Pipelines",
+        "Async/FRP",
+        "Services / Daily Report",
         "Reports",
     ],
 )
@@ -323,6 +327,138 @@ elif menu == "Pipelines":  # 5 лаба
         ],
         use_container_width=True,
     )
+elif menu == "Async/FRP":
+    st.header("Лабораторная №6 — FRP / обработка событий")
+    st.write(
+        "Кнопки публикуют события в EventBus. Подписчики обновляют "
+        "состояние корзин, продаж и возвратов."
+    )
+
+    if "store_event_bus" not in st.session_state:
+        st.session_state.store_event_bus = create_store_bus(
+            {"carts": {}, "sales": 0, "refunds": 0}
+        )
+
+    bus = st.session_state.store_event_bus
+    user_ids = [user.id for user in users]
+    product_ids = [product.id for product in products]
+
+    st.subheader("Добавить товар в корзину")
+    col1, col2, col3 = st.columns(3)
+    selected_user = col1.selectbox("Пользователь", user_ids, key="frp_user")
+    selected_product = col2.selectbox("Товар", product_ids, key="frp_product")
+    quantity = col3.number_input("Количество", min_value=1, value=1, step=1)
+
+    if st.button("ADD_TO_CART — добавить"):
+        bus.publish(
+            "ADD_TO_CART",
+            {
+                "user_id": selected_user,
+                "product_id": selected_product,
+                "qty": quantity,
+            },
+            time.strftime("%Y-%m-%dT%H:%M:%S"),
+        )
+        st.success("Событие ADD_TO_CART опубликовано.")
+
+    if st.button("REMOVE — удалить выбранный товар"):
+        bus.publish(
+            "REMOVE",
+            {"user_id": selected_user, "product_id": selected_product},
+            time.strftime("%Y-%m-%dT%H:%M:%S"),
+        )
+        st.success("Событие REMOVE опубликовано.")
+
+    st.subheader("Продажи и возвраты")
+    col1, col2 = st.columns(2)
+    event_total = col1.number_input(
+        "Сумма события (в копейках)", min_value=0, value=10000, step=100
+    )
+    if col1.button("CHECKOUT — оформить заказ"):
+        bus.publish(
+            "CHECKOUT",
+            {"user_id": selected_user, "total": event_total},
+            time.strftime("%Y-%m-%dT%H:%M:%S"),
+        )
+        st.success("Событие CHECKOUT опубликовано.")
+
+    if col2.button("REFUND — оформить возврат"):
+        bus.publish(
+            "REFUND",
+            {"user_id": selected_user, "total": event_total},
+            time.strftime("%Y-%m-%dT%H:%M:%S"),
+        )
+        st.success("Событие REFUND опубликовано.")
+
+    state = bus.state
+    metric1, metric2 = st.columns(2)
+    metric1.metric("Текущие продажи", f"{state.get('sales', 0) / 100:.2f} ₽")
+    metric2.metric("Возвраты", f"{state.get('refunds', 0) / 100:.2f} ₽")
+
+    st.subheader("Живой список корзин")
+    carts_view = [
+        {
+            "Пользователь": user_id,
+            "Товары": ", ".join(
+                f"{product_id} × {qty}" for product_id, qty in items
+            ),
+        }
+        for user_id, items in state.get("carts", {}).items()
+    ]
+    st.dataframe(carts_view, use_container_width=True)
+
+
+elif menu == "Services / Daily Report":
+    st.header("Лабораторная №7 — композиция и сервисы")
+    st.write(
+        "Фасады CatalogService, OrderService и AnalyticsService "
+        "объединяют операции над данными."
+    )
+
+    report_days = sorted({order.ts[:10] for order in orders})
+    report_day = st.selectbox("День для отчёта", report_days)
+
+    catalog_service = CatalogService(products)
+    order_service = OrderService(orders)
+    analytics_service = AnalyticsService(orders)
+
+    st.subheader("Промежуточные шаги")
+    day_orders = order_service.orders_for_day(report_day)
+    paid_orders = order_service.paid_orders_for_day(report_day)
+    report = analytics_service.daily_report(report_day)
+
+    st.write("Шаг 1. Заказы за выбранный день:", len(day_orders))
+    st.dataframe(
+        [
+            {
+                "Заказ": order.id,
+                "Пользователь": order.user_id,
+                "Сумма": f"{order.total / 100:.2f} ₽",
+                "Статус": order.status,
+            }
+            for order in day_orders
+        ],
+        use_container_width=True,
+    )
+
+    st.write("Шаг 2. Только оплаченные заказы:", len(paid_orders))
+    st.write("Шаг 3. Сумма продаж за день:")
+    st.metric("Продажи", f"{report['sales'] / 100:.2f} ₽")
+
+    st.write("Шаг 4. Топ покупателей за день:")
+    st.dataframe(
+        [
+            {"Пользователь": user_id, "Сумма": f"{total / 100:.2f} ₽"}
+            for user_id, total in report["top_customers"]
+        ],
+        use_container_width=True,
+    )
+
+    st.caption(
+        f"Каталог подключён через CatalogService: {len(catalog_service.products)} товаров."
+    )
+
+
 elif menu == "Reports":
     st.header("Reports")
 
